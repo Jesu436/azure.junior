@@ -66,16 +66,32 @@ Console.WriteLine($"{updateText} {version}!");
 string projectName = "First-Project";
 Console.WriteLine($@"C:\Output\{projectName}\Data");
 
-string ProjectName = "First-Project";
-var path = $@"C:\Output\{projectName}\Data";
-Console.WriteLine(path);
-
-
-
 string projectNAme = "ACME";
-string englishLocation = $@"c:\Exercise\{projectName}\data.txt";
+string englishLocation = $@"c:\Exercise\{projectNAme}\data.txt";
 Console.WriteLine($"View English output:\n\t\t{englishLocation}\n");
 
 string russianMessage = "\u041f\u043e\u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u0440\u0443\u0441\u0441\u043a\u0438\u0439 \u0432\u044b\u0432\u043e\u0434";
-string russianLocation = $@"c:\Exercise\{projectName}\ru-RU\data.txt";
+string russianLocation = $@"c:\Exercise\{projectNAme}\ru-RU\data.txt";
 Console.WriteLine($"{russianMessage}:\n\t\t{russianLocation}\n");
+
+string myrealname = "jesus manuel duran perez";
+string presentacion = $@"c:\Exercise\{myrealname}\date.txt";
+Console.WriteLine($"This dude is the best progammer:\n\t\t{presentacion}\n");
+
+StringBuilder sb1 = new StringBuilder();
+StringBuilder sb2 = new StringBuilder("Hello");
+StringBuilder sb3 = new StringBuilder(50);
+sb2.Append(" Mundo");
+Console.WriteLine(sb2);
+
+sb2.Insert(5, " C#");
+Console.WriteLine(sb2);
+sb2.Remove(6, 3);
+Console.WriteLine(sb2);
+sb2.Replace("Mundo", " El webo mio");
+Console.WriteLine(sb2);
+
+
+
+
+
