@@ -1,3 +1,5 @@
-﻿Console.Write("congratulations ");
-Console.Write("");
-Console.Write("you wrote your firts code");
+﻿Console.WriteLine("123");
+Console.WriteLine(123);
+Console.WriteLine("true");
+Console.WriteLine(true);
+
