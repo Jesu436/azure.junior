@@ -1,16 +1,19 @@
-using System.Runtime.ExceptionServices;
 using System.Text;
+var value = 38;
+value++;
+Console.WriteLine(value);
+
+value+= 5;
+Console.WriteLine(value);
+value-= 8;
+Console.WriteLine(value);
+value*= 85;
+Console.WriteLine(value);
 
 
-var firstnumberg = 300m;
-var secondnumberg = 567;
 
-Console.WriteLine("resultado de la suma: " + (firstnumberg + secondnumberg));  
-Console.WriteLine ("resultado de la resta: " + (firstnumberg - secondnumberg));
-Console.WriteLine("resultado de la multiplicacion: " + (firstnumberg * secondnumberg));
-Console.WriteLine("resultado de la division: " + (firstnumberg / secondnumberg));
-Console.WriteLine("resultado de la division de decimales: " + (firstnumberg / (decimal)secondnumberg));
-Console.WriteLine("resultado del modulo division de decimales: " + (firstnumberg % secondnumberg));
+
+
 
 
 
