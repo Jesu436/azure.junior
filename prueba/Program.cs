@@ -1,11 +1,26 @@
 using System.Collections;
 using System.Text;
+Random dados = new Random();
+int total = 0;
+string resultado = "";
+for (int i = 0; i < 3; i++)
+{
+    int roll =  dados.Next(1, 7);
+    total += roll;
+    resultado += (i > 0 ? " + " : "") + roll;
+}
+
+ Console.WriteLine($"dados roll: {resultado} = {total}");
 
 
-Console.WriteLine("The larger number is: " + Math.Max(7.8, 1.5));
-float radius = 7.8f;
-double area = Math.PI * radius * radius;
-Console.WriteLine("The area of this planet is: " +area);
+if (total > 14)
+{
+    Console.WriteLine("You win");
+}
+if (total < 15)
+{
+    Console.WriteLine("You lose");
+}
 
 
 
