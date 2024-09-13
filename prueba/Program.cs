@@ -9,11 +9,9 @@ for (int i = 0; i < 3; i++)
     total += roll;
     resultado += (i > 0 ? " + " : "") + roll;
 }
-
  Console.WriteLine($"dados roll: {resultado} = {total}");
 
-
-if (total > 14)
+if (total >= 14)
 {
     Console.WriteLine("You win");
 }
