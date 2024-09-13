@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Text;
-Random dados = new();
-var roll = dados.Next(1,7);
-Console.WriteLine (roll);
 
-Console.WriteLine(new Random().Next(1, 7));
+int firstValue = 600;
+int secondValue = 500;
+
+int largeValue = Math.Max(firstValue,secondValue);
+Console.WriteLine(largeValue);
 
 
 
