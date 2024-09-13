@@ -3,9 +3,10 @@ using System.Text;
 Random dados = new Random();
 int total = 0;
 string resultado = "";
+
 for (int i = 0; i < 3; i++)
 {
-    int roll =  dados.Next(1, 7);
+    int roll = dados.Next(1, 7);
     total += roll;
     resultado += (i > 0 ? " + " : "") + roll;
 }
@@ -18,6 +19,15 @@ if (total > 10)
 else
 {
     Console.WriteLine("You lose");
+}
+
+if (total == 10)
+{
+    Console.WriteLine(" bien manao");
+}  
+else
+{
+    Console.Write("la cagaste mamawebo");
 }
 
 
