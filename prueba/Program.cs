@@ -1,10 +1,15 @@
 using System.Collections;
 using System.Globalization;
 using System.Text;
-string [] carros = { "lambo", "buga", "merce",};
-foreach (var name in (carros))
+Console.Clear();
+string[] orderIDs = { "B123", "C234", "A345", "C15", "B177", "G3003", "C235", "B179" };
+
+foreach (string orderID in orderIDs)
 {
-    Console.WriteLine(name);
+    if (orderID.StartsWith("B"))
+    {
+        Console.WriteLine(orderID);
+    }
 }
 
 
