@@ -1,37 +1,27 @@
 using System.Collections;
 using System.Text;
-Random dados = new Random();
-int total = 0;
-string resultado = "";
-
-for (int i = 0; i < 3; i++)
+Random random = new Random();
+int daysUntilExpiration = random.Next(12);
+int discountPercentage = 0;
+if (daysUntilExpiration >= 10)
 {
-    int roll = dados.Next(1, 7);
-    total += roll;
-    resultado += (i > 0 ? " + " : "") + roll;
-}
- Console.WriteLine($"dados roll: {resultado} = {total}");
-
-if (total > 10)
+    Console.WriteLine("Your suscription will expire soon renew now!");
+}    
+else if (daysUntilExpiration >= 5)
 {
-    Console.WriteLine("You win");
-}
-else
-{
-    Console.WriteLine("You lose");
+    Console.WriteLine($"Your suscription will expire in {daysUntilExpiration} days. " + $"Renew now to enjoy a {discountPercentage}% of discount!.");
+    discountPercentage = 10;
 }
 
-if (total == 10)
+else if (daysUntilExpiration == 1)
 {
-    Console.WriteLine(" bien manao");
-}  
-else
-{
-    Console.Write("la cagaste mamawebo");
+    discountPercentage = 20;
+    Console.WriteLine("Your suscription expires withting a day!" + $" Renew now to enjoy a {discountPercentage}% of discount!.");
 }
-
-
-
+else 
+{
+    Console.WriteLine("Your suscription has expired.");
+}
 
 
 
