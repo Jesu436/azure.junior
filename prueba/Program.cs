@@ -29,6 +29,7 @@ else
     Console.WriteLine("You do not have sufficient privileges.");
 }
 
+// buscar la forma mas sencilla de hacer esto
 
 
 
