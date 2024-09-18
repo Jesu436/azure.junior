@@ -1,10 +1,15 @@
 using System.Text;
-#region Compilacion de condicion
-if(true)
+for (int i = 0; i < 101; i++)
 {
-    Console.WriteLine("Hola mundo");
-
+   if ((i % 3 == 0) && (i % 5 == 0))
+   
+      Console.WriteLine($"{i} - FizzBuzz");
+      else if ((i % 3 == 0))
+      Console.WriteLine($"{i} - Buzz");
+      else if (i % 5 == 0)
+      Console.WriteLine($"{i} - Fizz");
+      else
+      Console.WriteLine($"{i}");
+      
 }
-#endregion
-
 
