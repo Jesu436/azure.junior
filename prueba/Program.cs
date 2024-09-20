@@ -1,4 +1,5 @@
 using System.Globalization;
+CultureInfo.CurrentCulture = new CultureInfo("en-US");
 string customerName = "Ms. Barros";
 
 string currentProduct = "Magic Yield";
@@ -10,21 +11,12 @@ string newProduct = "Glorious Future";
 decimal newReturn = 0.13125m;
 decimal newProfit = 63000000.0m;
 
-Console.WriteLine($"Dear {customerName},");
-Console.WriteLine($"As a customer of our {currentProduct} offering we are excited to tell you about a new financial product that would dramatically increase your return.\n");
-Console.WriteLine($"Currently, you own {currentShares:N} shares at a return of {currentReturn:P}.\n");
-Console.WriteLine($"Our new product, {newProduct} offers a return of {newReturn:P}.  Given your current volume, your potential profit would be {newProfit:C}.\n");
-
-Console.WriteLine("Here`s a quick comparison:");
-
-string comparisonMessage = "";
-comparisonMessage = currentProduct.PadRight(20);
-comparisonMessage += String.Format("{0:P}", currentReturn).PadRight(10);
-comparisonMessage += String.Format("{0:C}", currentProfit).PadRight(20);
-
-comparisonMessage += "\n";
-comparisonMessage += newProduct.PadRight(20);
-comparisonMessage += String.Format("{0:P}", newReturn).PadRight(10);
-comparisonMessage += String.Format("{0:C}", newProfit).PadRight(20);
-
-Console.WriteLine(comparisonMessage);
+Console.WriteLine($"Dear {customerName},\n");
+Console.WriteLine($"As avalued customer of our {currentProduct} offering, we are excited to introduce you to a new financial product that could significantly enhance your returns.\n");
+Console.WriteLine($"Currently, you own {currentShares:N} shares with a return {currentReturn:P2}%.\n");
+Console.WriteLine($"Our new product, {newProduct}, offers a return of {newReturn:P2}%. Given your current volume your potential profit will increase to ${newProfit}.\n");
+Console.WriteLine("Here`s a quick comparison\n");
+Console.WriteLine($"Magic Yield: {currentReturn:P2}% - €{currentProfit}".PadLeft(38));
+Console.WriteLine($"Glorious Future: {newReturn:P2}% - €{newProfit}");
+Console.WriteLine("We believe this new product could be a great fit for your investment strategy.\n");
+Console.WriteLine("Best regards,\n[Jesus Duran]");
