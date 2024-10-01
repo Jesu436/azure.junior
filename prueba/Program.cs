@@ -1,27 +1,25 @@
-string[,] corporate = 
-{
-    {"Robert", "Bavin"}, {"Simon", "Bright"},
-    {"Kim", "Sinclair"}, {"Aashrita", "Kamath"},
-    {"Sarah", "Delucchi"}, {"Sinan", "Ali"}
-};
+using System;
 
-string[,] external = 
-{
-    {"Vinnie", "Ashton"}, {"Cody", "Dysart"},
-    {"Shay", "Lawrence"}, {"Daren", "Valdes"}
-};
 
-string externalDomain = "hayworth.com";
-
-void DisplayEmails(string[,] names, string domain = "contoso.com")
-{
-    for (int i = 0; i < names.GetLength(0); i++)
+class Program
+{ 
+    static Random random = new Random();
+    static void Main()
     {
-        string email = names[i, 0].Substring(0, 2) + names[i, 1];
-        email = email.ToLower();
-        Console.WriteLine($"{email}@{domain}");
+        do
+        {
+            PlayGame();
+            Console.WriteLine("\n ¿jugar de nuevo? (Y/N)");
+        } while (Console.ReadLine().Trim().ToUpper() == "Y");
     }
-}
 
-DisplayEmails(corporate);
-DisplayEmails(external, externalDomain);
+    static void PlayGame()
+    {
+        int target = random.Next(1, 6);
+        int roll = random.Next(1, 7);
+        
+        Console.WriteLine($"! Lanza un numero mayor que {target} para ganar!");
+        Console.WriteLine($"Haz lanzado un {roll}");
+        Console.WriteLine(roll > target ?   "!Ganaste" : "Perdiste");
+    }
+} 
