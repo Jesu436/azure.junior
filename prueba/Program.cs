@@ -1,16 +1,14 @@
 using System;
 
-namespace HelloWorld;
+namespace prueba;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("What is your name?");
-        var name = Console.ReadLine();
-        var currentDate = DateTime.Now;
-        Console.WriteLine($"{Environment.NewLine}Hello, {name}, on {currentDate:d} at {currentDate:t}!");
-        Console.Write($"{Environment.NewLine}Press any key to exit...");
-        Console.ReadKey(true);
+        var calculadora = new Calculadora();
+        Console.WriteLine(calculadora.suma(2,2));
+        Console.WriteLine(calculadora.resta(2,2));
     }
 } 
+
