@@ -1,25 +1,16 @@
 using System;
 
+namespace prueba;
 
 class Program
-{ 
-    static Random random = new Random();
-    static void Main()
+{
+    static void Main(string[] args)
     {
-        do
-        {
-            PlayGame();
-            Console.WriteLine("\n ¿jugar de nuevo? (Y/N)");
-        } while (Console.ReadLine().Trim().ToUpper() == "Y");
-    }
-
-    static void PlayGame()
-    {
-        int target = random.Next(1, 6);
-        int roll = random.Next(1, 7);
+        var calculadora = new Calculadora();
+        Console.WriteLine(calculadora.suma(2,2));
+        Console.WriteLine(calculadora.resta(2,2));
+        Console.WriteLine(calculadora.multiplicacion(2,2));
+        Console.WriteLine(calculadora.division(2,2));
         
-        Console.WriteLine($"! Lanza un numero mayor que {target} para ganar!");
-        Console.WriteLine($"Haz lanzado un {roll}");
-        Console.WriteLine(roll > target ?   "!Ganaste" : "Perdiste");
     }
 } 
