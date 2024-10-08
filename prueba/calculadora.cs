@@ -41,16 +41,44 @@ public class FizzBuzz
             return false;
     }
 
+    public bool multiplo7(int numero)
+    {
+        int resutlado = numero % 7;
+        if (resutlado == 0)
+            return true;
+        else
+            return false;
+    }
+
+    public bool numeroPrimo(int numero)
+    {
+        if (numero <= 1) 
+            return false;
+        
+        for (int i = 2; i <= Math.Sqrt(numero); i++)
+        {
+            if (numero % i == 0)
+            {
+                return false; 
+            } 
+        }
+        return true;
+    }
+
     public string printFizzBuzz(int numero)
     {
-        if(multiplo35(numero))
-        return "FizzBuzz";
+        if (multiplo35(numero))
+            return "FizzBuzz";
         else if (multiplo5(numero))
-        return "Buzz";
+            return "Buzz";
         else if (multiplo3(numero))
-        return "Fizz";
+            return "Fizz";
+        else if (multiplo7(numero))
+            return "Numero Suerte";
+        else if (numeroPrimo(numero))
+            return "Es numero Primo";
         else
-        return $"{numero}";
+            return $"{numero}";
     }
 
 }
