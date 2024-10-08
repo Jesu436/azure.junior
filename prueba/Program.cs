@@ -1,16 +1,15 @@
-using System;
-
+using System.Text;
 namespace prueba;
 
 class Program
 {
     static void Main(string[] args)
     {
-        var calculadora = new Calculadora();
-        Console.WriteLine(calculadora.suma(2,2));
-        Console.WriteLine(calculadora.resta(2,2));
-        Console.WriteLine(calculadora.multiplicacion(2,2));
-        Console.WriteLine(calculadora.division(2,2));
-        
+        var FizzBuzz = new FizzBuzz();
+
+        for (int i = 1; i < 16; i++)
+        {
+            Console.WriteLine(FizzBuzz.printFizzBuzz(i));
+        }
     }
-} 
+}
